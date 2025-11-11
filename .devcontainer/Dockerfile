@@ -24,6 +24,8 @@ RUN mkdir -p /home/node/.config/nvim \
 
 USER node
 
+ENV PATH="/workspace/node_modules/.bin:${PATH}"
+
 RUN npm i -g typescript
 
 WORKDIR /workspace
